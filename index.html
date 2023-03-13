@@ -1,0 +1,183 @@
+<link
+  rel="stylesheet"
+  href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+/>
+
+<!-- <center><h1>MY WEATHER APP</h1> -->
+
+<img
+  src="https://media4.giphy.com/media/pHWPCc5vy8HvziD41j/giphy.gif?cid=ecf05e47b279xgk68l4lusxl964khxyfy11fncwxl91q7dn1&rid=giphy.gif&ct=s"
+  class="birds"
+/>
+
+<div class="frame">
+  <div class="search-bar">
+    <form action="/" method="post">
+      <input
+        type="text"
+        class="search-area"
+        name="cityName"
+        placeholder="Search your city..."
+      />
+      <button type="submit" class="button">
+        <i class="fa fa-search"></i>
+      </button>
+    </form>
+
+    <ul class="list clearfix"></ul>
+  </div>
+</div>
+
+<style>
+  * {
+    box-sizing: border-box;
+  }
+
+  @import url("https://fonts.googleapis.com/css2?family=VT323&display=swap");
+  @import url("https://fonts.googleapis.com/css2?family=IBM+Plex+Mono&display=swap");
+
+  body {
+    background-image: url("https://images2.imgbox.com/42/4c/oFqWeQfd_o.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center;
+  }
+  img {
+    position: absolute;
+    top: 20%;
+    left: 40%;
+  }
+  h1 {
+    color: rgba(255, 255, 255, 0.8);
+    scale: 2;
+    width: 50%;
+    margin-top: 25px;
+    font-family: "VT323", monospace;
+  }
+  p {
+    color: rgba(0, 255, 247, 0.3);
+    margin-top: 55px;
+    font-family: "VT323", monospace;
+  }
+  .frame {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 400px;
+    height: 400px;
+    margin-top: -200px;
+    margin-left: -200px;
+    border-radius: 2px;
+    box-shadow: 4px 8px 16px 0 rgba(0, 0, 0, 0.5);
+    overflow: hidden;
+    background: rgba(0, 255, 247, 0.1);
+    color: #333;
+    font-family: "IBM Plex Mono", monospace;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  .search-bar {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 300px;
+    height: 50px;
+    background: #fff;
+    caret-color: #1169f7;
+    box-shadow: 4px 8px 16px 0 rgba(0, 0, 0, 0.6);
+  }
+
+  .search-bar .search-area {
+    width: 250px;
+    height: 50px;
+    background: #fff;
+    caret-color: #1169f7;
+    font-size: 18px;
+    padding: 15px;
+    letter-spacing: 2px;
+    border: none;
+  }
+
+  .search-bar .button {
+    position: absolute;
+    background: #9aeaff;
+    width: 50px;
+    height: 50px;
+    border: none;
+  }
+
+  .search-bar .button .fa {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    float: right;
+    font-size: 24px;
+    color: #0d05f8;
+    cursor: pointer;
+    transition: all 0.5s ease;
+  }
+
+  .search-bar .button:hover {
+    box-shadow: 8px 8px 8px 8px rgba(0, 0, 0, 0.3);
+    transition: all 0.5s ease;
+  }
+
+  .list {
+    color: #000;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 20px;
+    padding: 0 10px;
+    margin: 0;
+    list-style: none;
+  }
+
+  .active {
+    position: absolute;
+    color: #000;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 30px;
+    padding: 0 10px;
+    margin: 0;
+    border-top: 1px solid #000;
+    width: 250px;
+    height: 100px;
+    background: #fff;
+    box-shadow: 4px 8px 16px 0 rgba(0, 0, 0, 0.6);
+  }
+
+  li {
+    cursor: pointer;
+    margin: 18px 0;
+    padding: 0;
+  }
+
+  li:hover {
+    background: #4d8dcb;
+  }
+
+  .clearfix::before,
+  .clearfix::after {
+    content: " ";
+    display: table;
+  }
+
+  .clearfix::after {
+    clear: both;
+  }
+  @media screen and (max-width: 400px) {
+    img {
+      position: absolute;
+      top: 50%;
+      transform: scale(0.5);
+    }
+    .frame {
+      width: -200px;
+    }
+  }
+</style>
